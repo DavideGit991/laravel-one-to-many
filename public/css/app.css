@@ -1,0 +1,33 @@
+#task {
+  color: red;
+}
+
+#typology {
+  color: lightgreen;
+}
+
+#emp {
+  color: lightskyblue;
+}
+
+li {
+  list-style-type: none;
+  font-size: 20px;
+  color: lightyellow;
+  text-decoration: none;
+}
+
+li :hover {
+  color: lime;
+}
+
+a {
+  font-size: 20px;
+  color: lightyellow;
+  text-decoration: none;
+}
+
+a :hover {
+  color: lime;
+}
+

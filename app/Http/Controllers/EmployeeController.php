@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Employee;
+use App\Typology;
+use App\Task;
 class EmployeeController extends Controller
 {
     public function index()

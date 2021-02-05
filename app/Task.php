@@ -21,6 +21,6 @@ class Task extends Model
     
     public function typologies()
     {
-        return $this->belongsToMany(Tipology::class);
+        return $this->belongsToMany(Typology::class);
     }
 }
