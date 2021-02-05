@@ -21,6 +21,7 @@ class CreateTasksTable extends Migration
             $table->integer('priority');
 
             $table->bigInteger('employee_id')->unsigned();
+            
 
             $table->timestamps();
         });

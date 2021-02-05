@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Employee;
 use App\Task;
+use App\Typology;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,6 +16,7 @@ class DatabaseSeeder extends Seeder
          $this->call([
              EmployeeSeeder::class,
              TaskSeeder::class,
+             TypologySeeder::class,
              ]);
     }
 }
