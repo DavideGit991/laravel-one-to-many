@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Employee;
 use App\Typology;
 use App\Task;
+
 class EmployeeController extends Controller
 {
     public function index()
@@ -22,4 +23,15 @@ class EmployeeController extends Controller
         return view('pages.emp-show',compact('emp'));
     }
 
+    // function create
+    public function create()
+    {
+        return view('pages.emp-create');
+    }
+
+    public function store(Request $res)
+    {
+        Employee::create($res->all());
+        return redirect()->route('emp-index');
+    }
 }

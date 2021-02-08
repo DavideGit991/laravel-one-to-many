@@ -5,13 +5,21 @@
 
     <h2>Task aziendali:</h2>
 
+    <a class='create' href="{{route('task-create')}}">
+        Inserisci nuova task
+    </a>
+    <br>
     @foreach ($tasks as $task)
         <a href="{{route('task-show', $task->id)}}">
-            <h4>
+            
                     {{$task->title}} 
                 
-            </h4>
+           
         </a>
+        <a href="{{route('task-edit', $task->id )}}">
+            EDIT
+        </a>
+        <br>
     @endforeach
 
 @endsection

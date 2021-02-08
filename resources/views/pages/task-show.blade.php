@@ -13,7 +13,7 @@
 
             @foreach ($task->typologies as $type)
                 <div id="typology">
-                    <h5>Titolo tipo: {{$type ->title}}</h5>
+                    <h5>Titolo tipo: {{$type ->name}}</h5>
                     <h6>Descrizione{{$type ->description}}</h6>    
                 </div>  
             @endforeach 

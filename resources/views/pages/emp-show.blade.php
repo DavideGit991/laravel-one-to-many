@@ -1,6 +1,9 @@
 @extends('layouts.main-layout')
 
 @section('content')
+
+   
+
     <h2 id="emp">{{$emp->name}} {{$emp->lastname}}</h2>
         @foreach ($emp->tasks as $task)
         <ul id="task">
