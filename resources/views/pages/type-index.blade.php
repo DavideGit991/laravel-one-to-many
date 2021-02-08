@@ -11,11 +11,12 @@
     </h5>
     @foreach ($type as $item)
         <a href="{{route('type-show', $item->id)}}">
-            <h4>
+            
                 {{$item->name}} 
-            </h4>
+            
         </a>
         <a href="{{route('typology-edit',$item->id)}}">EDIT</a>
+        <br>
     @endforeach
 
 @endsection

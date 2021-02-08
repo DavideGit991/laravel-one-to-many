@@ -11,7 +11,7 @@
     <br>
     @foreach ($tasks as $task)
         <a href="{{route('task-show', $task->id)}}">
-                {{$task->title}} 
+            {{$task->title}} 
         </a>
         <a href="{{route('task-edit', $task->id )}}">
             EDIT

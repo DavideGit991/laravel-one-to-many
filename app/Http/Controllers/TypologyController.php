@@ -44,5 +44,24 @@ class TypologyController extends Controller
     }
 
     // update
-    
+    public function edit($id)
+    {
+        $type = Typology::findOrFail($id);
+        $tasks=Task::all();
+        return view('pages.type-edit',compact('type','tasks'));
+    }
+
+    public function update(Request $req,$id)
+    { 
+        $data = $req->all();
+        
+        $typeupdate= Typology::findOrFail($id);
+        $typeupdate->update($data);
+        $typeupdate->save();
+        
+        $tasks=Task::findOrFail($data['tasks']);
+        $typeupdate->tasks()->sync($tasks);
+
+        return redirect()->route('type-show', $typeupdate->id);
+    }
 }
