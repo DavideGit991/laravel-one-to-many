@@ -13,7 +13,7 @@ class TaskSeeder extends Seeder
      */
     public function run()
     {
-        factory(Task::class,20)
+        factory(Task::class,10)
         ->make()
         ->each(function ($task){
             $emp  = Employee::inRandomOrder()->first();
@@ -23,24 +23,3 @@ class TaskSeeder extends Seeder
     }
 }
 
-// class FornitureSeeder extends Seeder
-// {
-//     /**
-//      * Run the database seeds.
-//      *
-//      * @return void
-//      */
-//     public function run()
-//     {
-//         factory(Forniture::class, 50) 
-//             -> make()
-//             -> each(function($forn) {
-//             // dd($forn);
-//             $wood = Wood::inRandomOrder() -> first();
-//             // dd($wood -> name);
-//             // $forn -> wood_id = $wood -> id;
-//             $forn -> wood() -> associate($wood);
-//             $forn -> save();
-//         });
-//     }
-// }

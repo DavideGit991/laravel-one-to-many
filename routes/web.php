@@ -45,3 +45,17 @@ Route::get('/type', 'TypologyController@index')
 
 Route::get('/type/{id}', 'TypologyController@show')
         ->name('type-show');
+// Type-create
+Route::get('/new/Typology','TypologyController@create')
+        ->name('typology-create');
+        
+Route::post('/store/typology','TypologyController@store')
+        ->name('typology-store');
+        
+// Type-update
+   Route::get('/edit/typology/{id}','TypologyController@edit')
+        ->name('typology-edit');
+        
+Route::post('/update/typology/{id}','TypologyController@update')
+        ->name('typology-update');
+
