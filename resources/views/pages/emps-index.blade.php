@@ -16,6 +16,9 @@
                 {{$emp->lastname}}
             </h4>
         </a>
-    @endforeach
-
+        <a href="">
+            DELETE
+        </a>
+        @endforeach
+    
 @endsection

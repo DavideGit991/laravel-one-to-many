@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Task extends Model
 {
+    use SoftDeletes;
+
+
     protected $fillable=[
 
         'title',
@@ -18,7 +22,7 @@ class Task extends Model
     {
         return $this->belongsTo(Employee::class);
     }
-    
+
     public function typologies()
     {
         return $this->belongsToMany(Typology::class);

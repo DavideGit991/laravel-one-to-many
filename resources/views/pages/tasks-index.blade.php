@@ -16,6 +16,9 @@
         <a href="{{route('task-edit', $task->id )}}">
             EDIT
         </a>
+        <a href="{{route('task-delete', $task->id )}}">
+            DELETE
+        </a>
         <br>
     @endforeach
 

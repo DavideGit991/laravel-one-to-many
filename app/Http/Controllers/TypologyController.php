@@ -33,7 +33,7 @@ class TypologyController extends Controller
     public function store(Request $req)
     {
         $data=$req->all();
-        // dd($data);
+
         $newtype=typology::make($data);
         $newtype->save();
 

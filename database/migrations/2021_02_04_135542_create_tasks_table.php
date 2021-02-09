@@ -22,7 +22,7 @@ class CreateTasksTable extends Migration
 
             $table->bigInteger('employee_id')->unsigned();
             
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }
